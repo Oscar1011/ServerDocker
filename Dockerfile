@@ -5,7 +5,8 @@ FROM lsiobase/alpine:${ALPINE_VER}
 
 COPY ./requirements.txt .
 
-RUN   apk --no-cache add \
+RUN   apk update && \
+      apk --no-cache add \
       wget \
       curl \
       tzdata \
@@ -18,9 +19,10 @@ RUN   apk --no-cache add \
       alpine-sdk \
       chromium \
       chromium-chromedriver \
-      py3-pip && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+      py3-pip && \
+      cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
       echo "Asia/Shanghai" > /etc/timezone && \
-      apk del tzdata
+      apk del tzdata && \
+      pip3 install --no-cache -r requirements.txt
 
-RUN pip3 install --no-cache -r requirements.txt
 
