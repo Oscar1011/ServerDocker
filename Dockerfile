@@ -22,5 +22,5 @@ RUN   apk --no-cache add \
       echo "Asia/Shanghai" > /etc/timezone && \
       apk del tzdata
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache -r requirements.txt
 
