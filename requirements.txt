@@ -3,3 +3,4 @@ telethon
 PySocks
 selenium==3.141.0
 python-telegram-bot
+beautifulsoup4
