@@ -3,7 +3,7 @@ ARG ALPINE_VER=3.10
 FROM lsiobase/alpine:${ALPINE_VER}
 
 
-
+COPY ./requirements.txt .
 
 RUN   apk --no-cache add \
       wget \
@@ -22,5 +22,5 @@ RUN   apk --no-cache add \
       echo "Asia/Shanghai" > /etc/timezone && \
       apk del tzdata
 
-
+RUN pip3 install -r requirements.txt
 
