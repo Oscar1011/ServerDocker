@@ -8,7 +8,6 @@ FROM lsiobase/alpine:${ALPINE_VER}
 RUN   apk --no-cache add \
       wget \
       curl \
-      supervisor \
       tzdata \
       musl-dev \
       python3-dev \
@@ -17,6 +16,8 @@ RUN   apk --no-cache add \
       libxslt-dev \
       libffi-dev  \
       alpine-sdk \
+      chromium \
+      chromium-chromedriver \
       py3-pip && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
       echo "Asia/Shanghai" > /etc/timezone && \
       apk del tzdata
