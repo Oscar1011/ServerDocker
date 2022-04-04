@@ -1,4 +1,4 @@
-ARG ALPINE_VER=3.12
+ARG ALPINE_VER=3.13
 
 FROM lsiobase/alpine:${ALPINE_VER}
 
