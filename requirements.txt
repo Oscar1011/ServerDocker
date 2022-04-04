@@ -5,3 +5,9 @@ selenium==3.141.0
 python-telegram-bot
 beautifulsoup4
 lxml
+gevent
+Flask
+loguru
+pyarr
+Werkzeug>=0.16.1
+tmdbsimple
