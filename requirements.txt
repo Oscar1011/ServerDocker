@@ -8,6 +8,6 @@ lxml
 gevent
 Flask
 loguru
-pyarr
+arrapi
 Werkzeug>=0.16.1
 tmdbsimple
