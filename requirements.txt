@@ -11,3 +11,4 @@ loguru
 arrapi
 Werkzeug>=0.16.1
 tmdbsimple
+PyYAML
